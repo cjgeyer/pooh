@@ -1,0 +1,11 @@
+rm -f pooh/src/*.o pooh/src/*.so
+R CMD check pooh
+R CMD INSTALL -l ../library pooh
+
+R CMD build pooh
+tar ztvf pooh_0.1-1.tar.gz | sed 's/^.*pooh\///' | sort
+
+export VALGRIND_OPTS="--tool=memcheck"
+R CMD check --no-vignettes --use-valgrind pooh
+
+~/local/release/bin/R CMD check --use-valgrind pooh
