@@ -1,6 +1,6 @@
 Package: pooh
-Version: 0.2-1
-Date: 2013-03-27
+Version: 0.2-2
+Date: 2013-03-29
 Title: Partial Orders and Relations
 Author: Charles J. Geyer <charlie@stat.umn.edu>.
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
