@@ -8,3 +8,7 @@
 *.Rout
 *.Rcheck
 *.tar.gz
+Outputs/
+PACKAGES
+PACKAGES.gz
+timings.tab
