@@ -29,7 +29,11 @@ Type 'q()' to quit R.
 >  baz <- pmin(foo, bar)
 >  qux <- pmax(foo, bar)
 > 
->  quacks <- tsort(baz, qux, d)
+>  quacks <- tsort(baz, qux, d, strict = FALSE)
+>  try(tsort(baz, qux, d))
+Error in tsort(baz, qux, d) : cyclic graph
+>  any(baz == qux)
+[1] TRUE
 > 
 >  length(quacks) == length(d)
 [1] TRUE
@@ -43,7 +47,12 @@ Type 'q()' to quit R.
 >  quacks <- try(tsort(1:2, 2:1))
 Error in tsort(1:2, 2:1) : cyclic graph
 > 
+>  tsort(character(0), character(0))
+character(0)
+>  tsort(character(0), character(0), domain = 1:5)
+[1] 5 4 3 2 1
+> 
 > 
 > proc.time()
    user  system elapsed 
-  0.276   0.032   0.303 
+  0.272   0.036   0.302 

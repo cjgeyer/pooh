@@ -1,4 +1,4 @@
-rm -f pooh/src/*.o pooh/src/*.so
+rm -f pooh/src/*.{o,so}
 R CMD check pooh
 R CMD INSTALL -l ../library pooh
 
