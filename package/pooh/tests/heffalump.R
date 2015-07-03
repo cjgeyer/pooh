@@ -27,3 +27,7 @@
  tsort(character(0), character(0))
  tsort(character(0), character(0), domain = 1:5)
 
+ try(tsort(1:5, 2:6))
+ try(tsort(c(1:5, 1), c(2:6, 1)))
+ try(tsort(c(1:5, 1), c(2:6, 1), strict = FALSE))
+
