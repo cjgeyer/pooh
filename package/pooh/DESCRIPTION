@@ -1,10 +1,10 @@
 Package: pooh
-Version: 0.3-1
-Date: 2015-07-03
+Version: 0.3-2
+Date: 2017-03-26
 Title: Partial Orders and Relations
 Author: Charles J. Geyer <charlie@stat.umn.edu>.
 Maintainer: Charles J. Geyer <charlie@stat.umn.edu>
-Depends: R (>= 2.10.0)
+Depends: R (>= 3.0.2)
 Description: Finds equivalence classes corresponding to a symmetric relation
     or undirected graph.  Finds total order consistent with partial order
     or directed graph (so-called topological sort).

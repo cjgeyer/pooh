@@ -1,6 +1,6 @@
-rm -f pooh/src/*.{o,so}
-R CMD check pooh
-R CMD INSTALL -l ../library pooh
+\rm -rf *.tar.gz # if version change
+R CMD build pooh
+R CMD check pooh_*.tar.gz
 
 R CMD build pooh
 tar ztvf pooh_0.1-1.tar.gz | sed 's/^.*pooh\///' | sort
