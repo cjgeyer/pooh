@@ -27,7 +27,7 @@ Pairs \code{(from[i], to[i])} can be though of either as elements of
 a relation on a set or as edges in a directed graph.
 This function finds one total order on the domain (nodes of the graph)
 that is consistent with the relation (graph) if one exists (that is if the
-graph is directed).
+directed graph is acyclic).
 }
 \value{
 A vector that is a reordering of \code{domain} so that every element of
